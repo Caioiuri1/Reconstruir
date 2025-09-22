@@ -1,0 +1,84 @@
+* {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "wdth" 100,
+        "GRAD" 0,
+        "XOPQ" 96,
+        "XTRA" 468,
+        "YOPQ" 79,
+        "YTAS" 750,
+        "YTDE" -203,
+        "YTFI" 738,
+        "YTLC" 514,
+        "YTUC" 712;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #4B0C24;
+    z-index: 9999;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    padding: 20px 40px;
+    font-family: "Meow Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    border: 1px solid rgba(228, 221, 221, 0.281) ;
+    background: transparent;
+    color: white;
+    transition: all ease-in-out 0.87s;
+    font-size: 18px;
+    font-weight: 100;
+    box-shadow: rgba(234, 0, 255, 0.4) 0px 30px 90px;
+}
+
+button:hover{
+    box-shadow: rgba(234, 0, 255, 0.4) 0px 30px 90px;
+    transform: scale(0.99);
+}
+
+#falling-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* não interfere em cliques */
+    overflow: hidden;
+    z-index: 99;
+    /* acima de tudo */
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 20px;
+    opacity: 0.8;
+    animation-name: fall;
+    animation-timing-function: linear;
+    user-select: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}

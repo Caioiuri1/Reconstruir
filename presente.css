@@ -1,0 +1,172 @@
+* {
+    font-family: "Meow Script", cursive;
+    font-weight: 100;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #A11A4E ;
+    z-index: 9999;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+main {
+    margin: 0 auto;
+    width: 500px;
+    height: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgs {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.imgs.active {
+    opacity: 1;
+}
+
+.imgs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+.title {
+    margin-top: 2rem;
+    color: white;
+}
+
+.decoração {
+    margin-top: 2rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 40px;
+
+}
+
+.span {
+    font-size: 18px;
+    color: white;
+}
+
+.texto {
+    width: 800px;
+    font-size: 18px;
+    margin-top: 2rem;
+    color: white;
+}
+
+.paragrafo {
+    color: #db767b;
+}
+
+.texto .p-2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    color: #db767b;
+}
+
+#falling-hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* não interfere em cliques */
+    overflow: hidden;
+    z-index: 999;
+    /* acima de tudo */
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d6d;
+    font-size: 20px;
+    opacity: 0.8;
+    animation-name: fall;
+    animation-timing-function: linear;
+    user-select: none;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.texto .fim{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+
+@media (max-width: 480px) {
+    iframe{
+        width: 100%;
+    }
+    main {
+        width: 95%;       
+        height: 55vh;     
+    }
+    .title {
+        font-size: 1.4rem;
+    }
+    .span {
+        font-size: 0.85rem;
+    }
+    .texto {
+        font-size: 0.85rem;
+        width: 95%;
+    }
+}
+
+
+@media (min-width: 390px) and (max-width: 430px) and (min-height: 780px) and (max-height: 880px) {
+
+    iframe{
+        width: 100%;
+    }
+
+    main {
+        width: 95%;
+        height: 60vh;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .span {
+        font-size: 0.9rem;
+    }
+    .texto {
+        font-size: 0.9rem;
+        width: 95%;
+        line-height: 1.6;
+    }
+    .decoração {
+        padding: 15px 20px;
+    }
+}
