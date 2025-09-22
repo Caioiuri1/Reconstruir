@@ -23,6 +23,7 @@ main {
     height: 800px;
     overflow: hidden;
     position: relative;
+    margin-top: 2rem;
 }
 
 .imgs {
@@ -126,7 +127,7 @@ main {
 
 @media (max-width: 480px) {
     iframe{
-        width: 100%;
+        width: 90%;
     }
     main {
         width: 95%;       
@@ -148,7 +149,7 @@ main {
 @media (min-width: 390px) and (max-width: 430px) and (min-height: 780px) and (max-height: 880px) {
 
     iframe{
-        width: 100%;
+        width: 90%;
     }
 
     main {
