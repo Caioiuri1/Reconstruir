@@ -128,6 +128,7 @@ main {
 @media (max-width: 480px) {
     iframe{
         width: 90%;
+        margin-bottom: 2rem;
     }
     main {
         width: 95%;       
@@ -150,6 +151,7 @@ main {
 
     iframe{
         width: 90%;
+        margin-bottom: 2rem;
     }
 
     main {
